@@ -45,11 +45,11 @@ header p {
   background-color: #f8d63c;
 }
 
-.status-open header p {
+.status-in-progress header p {
   background-color: #3ceff8;
 }
 
-.status-open header p {
+.status-done header p {
   background-color: #c484fc;
 }
 

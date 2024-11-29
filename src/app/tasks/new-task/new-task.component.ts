@@ -1,10 +1,12 @@
 import { Component, ElementRef, viewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-new-task',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css',
 })
@@ -13,7 +15,8 @@ export class NewTaskComponent {
 
   constructor(private tasksService: TasksService) {}
 
-  onAddTasks(title: string, description: string) {
+  onAddTask(title: string, description: string) {
+    console.log({ title: title, description: description });
     this.tasksService.addTask({ title: title, description: description });
     this.formEl()?.nativeElement.reset();
   }

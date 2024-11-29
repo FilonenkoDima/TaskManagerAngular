@@ -1,6 +1,6 @@
 <article
   [class]="{
-    'status-task': task().status === 'OPEN',
+    'status-open': task().status === 'OPEN',
     'status-in-progress': task().status === 'IN_PROGRESS',
     'status-done': task().status === 'DONE'
   }"
@@ -20,6 +20,8 @@
         Completed
       </option>
     </select>
-    <p><button>Change Status</button></p>
+    <p>
+      <button>Change Status</button>
+    </p>
   </form>
 </article>
