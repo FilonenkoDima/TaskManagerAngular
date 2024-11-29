@@ -13,7 +13,7 @@
 <ul>
   @for(task of tasks; track task){
   <li>
-    <app-task-item />
+    <app-task-item [task]="task" />
   </li>
   }
 </ul>
